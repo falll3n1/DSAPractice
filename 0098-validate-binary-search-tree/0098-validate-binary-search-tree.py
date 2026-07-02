@@ -10,10 +10,8 @@ class Solution:
         def valid(node, left , right):
             if not node: return True
 
-            if not (node.val > left and node.val < right):
-                return False
+            if node.val < left or node.val > right: return False
 
-            return (valid(node.left, left, node.val) and 
-                    valid(node.right, node.val, right))
+            return valid(node.left, left, node.val - 1) and valid(node.right, node.val + 1, right)
 
         return valid(root, float('-inf'), float('inf'))
