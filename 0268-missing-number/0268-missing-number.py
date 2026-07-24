@@ -11,15 +11,19 @@ class Solution:
         # ans = s.pop()
         # return ans
 
+        # n = len(nums)
+        # win_sum = n * (n+1) //2
+        # ar_sum = 0
+        # for num in nums :
+        #     ar_sum += num
+        # return (win_sum - ar_sum)
         n = len(nums)
+        return n * (n+1) //2 - sum(nums)
 
-        win_sum = n * (n+1) //2
-        ar_sum = 0
 
-        for num in nums :
-            ar_sum += num
 
-        return (win_sum - ar_sum)
+
+
 
         
 
