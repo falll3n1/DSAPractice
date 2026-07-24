@@ -17,8 +17,8 @@ class Solution:
         # for num in nums :
         #     ar_sum += num
         # return (win_sum - ar_sum)
-        n = len(nums)
-        return n * (n+1) //2 - sum(nums)
+        
+        return len(nums) * (len(nums)+1) //2 - sum(nums)
 
 
 
