@@ -1,17 +1,26 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        s = set()
-        n = len(nums) + 1 
+        # use a set add elements to it remove elements preent in the input array ,
+        # only one element will remain , pop it into a variable and return it
+        # s = set()
+        # n = len(nums) + 1 
+        # for i in range(n):
+            # s.add(i)
+        # for num in nums:
+            # s.discard(num)
+        # ans = s.pop()
+        # return ans
 
-        for i in range(n):
-            s.add(i)
+        n = len(nums)
 
+        win_sum = n * (n+1) //2
+        ar_sum = 0
 
-        for num in nums:
-            s.discard(num)
+        for num in nums :
+            ar_sum += num
 
-        ans = s.pop()
+        return (win_sum - ar_sum)
 
-        return ans
+        
 
         
