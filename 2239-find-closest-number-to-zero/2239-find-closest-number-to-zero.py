@@ -5,7 +5,7 @@ class Solution:
         for num in nums:
             if abs(num) < abs(mini):
                 mini = num
-        if mini < 0 and abs(mini) in nums:
+        if mini in nums and abs(mini) in nums:
             return abs(mini)
         else:
             return mini
