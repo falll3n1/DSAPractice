@@ -18,9 +18,24 @@ class Solution:
         #     ar_sum += num
         # return (win_sum - ar_sum)
         
-        return len(nums) * (len(nums)+1) //2 - sum(nums)
+        # return len(nums) * (len(nums)+1) //2 - sum(nums)
 
+        # ans = len(nums)
+        # for i , v in enumerate(nums):
+        #     ans ^= i ^ v 
+        # return ans
 
+        nums.sort()
+        hi , lo = len(nums) , 0
+        while lo < hi :
+            mid = (lo + hi) // 2
+
+            if nums[mid] == mid :
+                lo = mid +1
+            else :
+                hi = mid
+
+        return lo 
 
 
 
