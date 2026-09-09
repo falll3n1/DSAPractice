@@ -4,3 +4,4 @@ class Solution:
         for i in range(1,n+1):
             res[i] = res[i//2] + i%2
         return res
+        # https://www.youtube.com/watch?v=awxaRgUB4Kw
