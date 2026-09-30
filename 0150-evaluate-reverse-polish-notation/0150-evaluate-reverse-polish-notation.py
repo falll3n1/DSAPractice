@@ -11,4 +11,4 @@ class Solution:
             else:
                 s.append(int(ch))
 
-        return s[0]
+        return s[-1]
